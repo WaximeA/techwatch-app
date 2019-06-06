@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :set_category, only: [:show, :update, :destroy]
+  before_action :set_category, only: [:show, :update, :destroy, :get_posts]
 
   # GET /categories
   def index
@@ -36,6 +36,11 @@ class CategoriesController < ApplicationController
   # DELETE /categories/1
   def destroy
     @category.destroy
+  end
+
+  # GET /categories/:id/posts
+  def get_posts
+    render json:  @category.posts, status: :success
   end
 
   private
