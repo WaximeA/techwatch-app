@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   get 'posts/:id/comments', to: 'posts#get_comments'
   get 'categories/:id/posts', to: 'categories#get_posts'
+
+  api_guard_routes for: 'users'
 end
