@@ -52,6 +52,17 @@ Example:
 }
 ```
 
+Others :
+```
+# $ bundle exec rails routes
+
+user_sign_up POST   /users/sign_up(.:format) api_guard/registration#create
+user_delete DELETE /users/delete(.:format) api_guard/registration#destroy
+user_sign_in POST   /users/sign_in(.:format) api_guard/authentication#create
+user_sign_out DELETE /users/sign_out(.:format) api_guard/authentication#destroy
+user_passwords PATCH  /users/passwords(.:format) api_guard/passwords#update
+```
+
 #### Example response body:
 ```
 {
