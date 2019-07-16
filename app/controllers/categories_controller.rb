@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :update, :destroy, :get_posts]
+  before_action :authenticate_and_set_user, only: [:create, :update, :destroy]
 
   # GET /categories
   def index
