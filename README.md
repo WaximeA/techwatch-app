@@ -43,6 +43,9 @@ Example:
 ## Routes:
 
 ### User:
+
+[Doc api-guard](https://github.com/Gokul595/api_guard)
+
 - Sing up `POST http://127.0.0.1:3000/users/sign_up` with body
 ```
 {
@@ -51,8 +54,15 @@ Example:
     "password_confirmation": "api_password"
 }
 ```
+- Sign in `POST http://127.0.0.1:3000/users/sign_in` with body
+```
+{
+  "email": "user@apiguard.com",
+  "password": "api_password"
+}
+```
 
-Others :
+All api-guard routes :
 ```
 # $ bundle exec rails routes
 
@@ -75,6 +85,28 @@ user_passwords PATCH  /users/passwords(.:format) api_guard/passwords#update
 Access-Token: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NDY3MDgwMjAsImlhdCI6MTU0NjcwNjIyMH0.F_JM7fUcKEAq9ZxXMxNb3Os-WeY-tuRYQnKXr_bWo5E
 Refresh-Token: Iy9s0S4Lf7Xh9MbFFBdxkw
 Expire-At: 1546708020
+```
+
+### Header:
+
+You have to had this header : 
+```
+[
+    {
+        "key":"Content-Type",
+        "name":"Content-Type",
+        "value":"application/json",
+        "description":"",
+        "type":"text"
+    },
+    {
+        "key":"Authorization",
+        "value":"Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NjMzNjY3MTQsImlhdCI6MTU2MzI4MDMxNH0.9jF__PQHemje3SDeJiiEDjEh0b_8lgZkIcFnDpXU3wU",
+        "description":"",
+        "type":"text",
+        "enabled":true
+    }
+]
 ```
 
 ### Categories:
