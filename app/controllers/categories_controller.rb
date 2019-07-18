@@ -16,7 +16,8 @@ class CategoriesController < ApplicationController
 
   # POST /categories
   def create
-    @category = Category.new(category_params)
+    current_user_id = @current_user.id
+    @category = Category.new(category_params.merge(user_id: current_user_id))
 
     if @category.save
       render json: @category, status: :created, location: @category
