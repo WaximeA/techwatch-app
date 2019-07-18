@@ -137,7 +137,8 @@ user_passwords PATCH  /users/passwords(.:format) api_guard/passwords#update
 	"description": "First category description blabla"
 }
 ```
-- Get Category: `GET http://127.0.0.1:3000/categories`
+- Get Categories: `GET http://127.0.0.1:3000/categories`
+- Get Category: `GET http://127.0.0.1:3000/categories/1`
 - Get Category Posts: `GET http://localhost:3000/categories/1/posts`
 
 
@@ -152,6 +153,7 @@ user_passwords PATCH  /users/passwords(.:format) api_guard/passwords#update
 }
 ```
 - Get Posts: `GET http://127.0.0.1:3000/posts`
+- Get Post: `GET http://127.0.0.1:3000/posts/1`
 - Get Post Comments: `GET http://localhost:3000/posts/1/comments`
 
 ### Comments:
@@ -164,3 +166,4 @@ user_passwords PATCH  /users/passwords(.:format) api_guard/passwords#update
 }
 ```
 - Get Comments: `GET http://127.0.0.1:3000/comments`
+- Get Comment: `GET http://127.0.0.1:3000/comments/1`
