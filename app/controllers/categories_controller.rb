@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :update, :destroy, :get_posts]
+  before_action :authenticate_and_set_user, only: [:create, :update, :destroy]
 
   # GET /categories
   def index
@@ -15,7 +16,8 @@ class CategoriesController < ApplicationController
 
   # POST /categories
   def create
-    @category = Category.new(category_params)
+    current_user_id = @current_user.id
+    @category = Category.new(category_params.merge(user_id: current_user_id))
 
     if @category.save
       render json: @category, status: :created, location: @category
