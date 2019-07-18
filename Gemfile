@@ -48,3 +48,5 @@ gem 'active_model_serializers'
 
 gem 'api_guard'
 gem 'bcrypt', '~> 3.1.7'
+
+gem 'rack-cors'
