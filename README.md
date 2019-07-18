@@ -24,6 +24,8 @@ $ rails db:migrate
 $ bundle exec bin/rails server 
 ```
 
+Bonus : easy to use database cleaning : `$ bundle exec rake db:drop db:create db:migrate`
+
 
 ## WARNING:
 
