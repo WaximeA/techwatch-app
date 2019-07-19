@@ -67,7 +67,7 @@ export const Register = (props) => {
                 <TextField error={!!props.password_repeat_validation} helperText={props.password_repeat_validation ? props.password_repeat_validation : ""} variant="outlined" margin="normal" required fullWidth name="passwordRepeat" label="Repeat your password" type="password" id="passwordRepeat" autoComplete="password-repeat" value={props.passwordRepeat} onChange={props.handleChange}/>
                 <TextField error={!!props.pseudo_validation} helperText={props.pseudo_validation} variant="outlined" margin="normal" required fullWidth id="pseudo" label="Pseudo" name="pseudo" autoComplete="pseudo" value={props.pseudo} onChange={props.handleChange}/>
                 <div className={classes.wrapper}>
-                    <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}> Sign In </Button> {props.submitted &&
+                    <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}> Sign Up </Button> {props.submitted &&
                 <CircularProgress size={24} className={classes.buttonProgress}/>}
                 </div>
                 <Grid container> <Grid item> <NavLink to={LinkConstants.LOGIN} variant="body2">
