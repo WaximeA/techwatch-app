@@ -1,5 +1,10 @@
-# This file is used by Rack-based servers to start the application.
+require "rack/cors"
+use Rack::Cors do
 
-require_relative 'config/environment'
-
-run Rails.application
+  allow do
+    origins "*"
+    resource "*",
+             :headers => :any,
+             :methods => [:get, :post, :delete, :put, :options, :patch]
+  end
+end

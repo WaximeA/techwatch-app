@@ -36,8 +36,8 @@ export const LoginProvider = ({children}) => {
             userService.logout();
             return Promise.resolve(true);
         },
-        register: (email, pseudo, password) => {
-            const user = {email, pseudo, password};
+        register: (email, password) => {
+            const user = {email, password};
             return userService.register(user).then(user => {
                 console.log(user);
             }, error => {

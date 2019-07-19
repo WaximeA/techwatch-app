@@ -8,7 +8,7 @@ const api_url = `${config.apiUrl}/users`;
 const login = (username, password) => {
     const requestOptions = {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'origin, x-requested-with, content-type', 'Access-Control-Allow-Methods': 'PUT, GET, POST, DELETE, OPTIONS'},
         body: JSON.stringify({email: username, password})
     };
 
@@ -76,7 +76,7 @@ function getById(id) {
 function register(user) {
     const requestOptions = {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'origin, x-requested-with, content-type', 'Access-Control-Allow-Methods': 'PUT, GET, POST, DELETE, OPTIONS'},
         body: JSON.stringify(user)
     };
 

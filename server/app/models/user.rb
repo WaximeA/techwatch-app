@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  validates_presence_of :firstname, :lastname, :pseudo, :email, :password_digest
+  validates_presence_of :pseudo, :email, :password_digest
 
   has_secure_password
 
